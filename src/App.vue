@@ -5,31 +5,42 @@
     <greet name="Aung" heroName="Super Man"></greet>
     <greet :name="name" :heroName="channel"></greet>
     <Article id="my-article" title="Article Title" :likes="50" :isPublished="true" /> -->
-      <h3>AppComponent Username {{ name }}</h3>
-    <ComponentC />
+      <!-- <h3>AppComponent Username {{ name }}</h3>
+    <ComponentC /> -->
+    <button @click="showPopup = true">show</button>
+    <Popup v-show="showPopup" @close="closePopup" />
   </div>
 </template>
 
 <script>
 //import Greet from './components/Greet.vue';
 //import Article from './components/Article.vue';
-import ComponentC from './components/ComponentC.vue';
+//import ComponentC from './components/ComponentC.vue';
+import Popup from './components/Popup.vue';
 export default {
   name: 'App',
   components: {
     //Greet,
     //Article,
-    ComponentC,
+    //ComponentC,
+    Popup,
   },
   data(){
     return{
-       name:'Na Na',
+      showPopup:false,
+       //name:'Na Na',
       // channel:'Developer Nay',
+    }
+  },
+  methods:{
+    closePopup(name){
+      this.showPopup = false,
+      console.log('Name', name);
     }
   },
   provide(){
     return{
-      username:this.name
+      //username:this.name
     }
   },
 }
