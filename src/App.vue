@@ -1,6 +1,9 @@
 <template>
   <div>
-    <greet></greet>
+    <greet name="Nay" heroName="Batman"></greet>
+    <greet name="Zaw" heroName="Ant Man"></greet>
+    <greet name="Aung" heroName="Super Man"></greet>
+    <greet :name="name" :heroName="channel"></greet>
   </div>
 </template>
 
@@ -10,6 +13,12 @@ export default {
   name: 'App',
   components: {
     Greet,
+  },
+  data(){
+    return{
+      name:'Na Na',
+      channel:'Developer Nay',
+    }
   }
 }
 </script>
