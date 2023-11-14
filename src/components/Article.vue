@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Article Component</h2>
-        <h3>{{ title }} -- Like - {{ likes }} -- Published is {{ isPublished ? 'Yes':'No' }}</h3>
+        <h3 v-bind="$attrs">{{ title }} -- Like - {{ likes }} -- Published is {{ isPublished ? 'Yes':'No' }}</h3>
 
     </div>
 </template>
@@ -18,6 +18,7 @@
             likes:Number,
             isPublished:Boolean,
         },
+        inheritAttrs:false,
     }
 </script>
 

@@ -4,7 +4,7 @@
     <greet name="Zaw" heroName="Ant Man"></greet>
     <greet name="Aung" heroName="Super Man"></greet>
     <greet :name="name" :heroName="channel"></greet>
-    <Article title="Article Title" :likes="50" :isPublished="true" />
+    <Article id="my-article" title="Article Title" :likes="50" :isPublished="true" />
   </div>
 </template>
 
